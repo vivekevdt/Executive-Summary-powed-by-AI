@@ -13,11 +13,12 @@ const app = express();
  */
 app.use(
   cors({
-    origin: 'http://localhost:5174',
+    origin: ['http://localhost:5174', 'http://localhost:5173', 'https://executive-summary-powed-by-ai-zuari.onrender.com'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
+
 
 import path from 'path';
 import { fileURLToPath } from 'url';
