@@ -1,10 +1,19 @@
 import express from 'express';
 import upload from '../config/multer.js';
 
-import { generateExecutiveSummary, getAllReports } from '../controllers/reportController.js';
+import { generateExecutiveSummary, getAllReports, getJobStatus, getReportSummary, downloadFile, updateReport } from '../controllers/reportController.js';
+import { authenticateToken } from '../middleware/authMiddleware.js';
+
 const router = express.Router();
 
+// Apply middleware to all routes in this router
+router.use(authenticateToken);
+
 router.get('/', getAllReports);
+router.get('/status/:jobId', getJobStatus);
+router.get('/summary/:fileId', getReportSummary);
+router.get('/download/:filename', downloadFile);
+router.put('/update/:fileId', updateReport);
 
 router.post(
 

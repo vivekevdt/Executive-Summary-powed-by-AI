@@ -8,7 +8,6 @@ const client = new OpenAI({
 
 
 
-
 export const uploadPdf = async (filePath) => {
   const fileStream = fs.createReadStream(filePath);
 
@@ -182,6 +181,5 @@ export const generateSummaryFromPdfs = async (
   return json;
 
 };
-
 
 

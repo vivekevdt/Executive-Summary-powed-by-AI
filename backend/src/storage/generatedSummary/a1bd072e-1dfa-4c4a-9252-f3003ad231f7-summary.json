@@ -1,0 +1,218 @@
+{
+  "header": {
+    "mill_name": "Gobind Sugar Mill, Aira",
+    "week": "25th Jan. to 31th Jan. 2026",
+    "comparison_week": "11th Jan. to 17th Jan. 2026",
+    "season_day": "98"
+  },
+  "part1": {
+    "executive_summary": [
+      {
+        "title": "CRUSHING PERFORMANCE",
+        "text": "Total Sugarcane Crush (LQ) remained flat at 7.14 LQ. Ever highest crush 1.105 was done on 25.01.26. Juice flow maintained above 500 T/Hr.vivek kumar"
+      },
+      {
+        "title": "RECOVERY",
+        "text": "Sugar Recovery at 10.10% vs 9.66% in previous week. Pol in Cane improved to 13.25% from 13.01% last week.dfg\nsfgsdf"
+      },
+      {
+        "title": "LOSSES",
+        "text": "Total losses slightly decreased to 3.10% from 3.18%. Losses in Molasses and Bagasse stable.dfgdg"
+      },
+      {
+        "title": "POWER",
+        "text": "Power Generation decreased to 61.30 LU from 65.26 LU. Power Export decreased to 36.34 LU from 39.18 LU. Reduction linked to boiler cleaning and shutdowns."
+      },
+      {
+        "title": "DISTILLERY",
+        "text": "Ethanol production significantly decreased to 3.77 LL from 8.37 LL due to scheduled 68.48 hrs shutdown during cleaning."
+      },
+      {
+        "title": "SUGAR QUALITY",
+        "text": "DS ICUMSA M-sugar improved to 86 from 74 last week. RS ICUMSA L-sugar stable at 25 vs 23 last week. Pharma sugar quality consistent."
+      },
+      {
+        "title": "CAPEX / PROJECTS",
+        "text": "Procurement initiated for long delivery items including cane unloaders conversion and gearbox. Mill secondary Gear Box SBN 630 proposed for new procurement due to aged condition."
+      },
+      {
+        "title": "EHS & SAFETY",
+        "text": "Safety Audit completed by external body. 1 near miss reported. Work Based Tool-box training conducted with 50 participants."
+      }
+    ],
+    "overall_performance": "Crushing smooth and consistent. Achieved 99.03 LQ till date. Engineering downtime increased to 8.03 hrs vs 6.33 hrs last week due to cleaning and shutdowns. Power plant operated satisfactorily except 70 TPH boiler shutdown for cleaning. Distillery shutdown impacted ethanol production.",
+    "benchmark_position": "Pol in Cane improved to 13.25% vs peer range 12.23%-13.62%. Recovery at 10.10% vs peer range 9.91%-10.45%. Aira ahead in recovery compared to some group mills.",
+    "cane_planning": "Daily Indent 1.01 LQ vs 1.21 LQ last week. Gate indent maturity improved to 110% from 81%. Center indent maturity improved to 97% from 76%. Yard balance stable at 24,700 Qtls. Indent failure cases tracked and ongoing revalidation.",
+    "engineering": "Hours utilized at 95.21% vs 96.10% last week. Downtime increased to 8.01 hrs from 6.33 hrs due to scheduled general cleaning (7.48 hrs) and forced shutdowns. Planned stoppage 7.48 hrs. Crushing rate at 101,643 Qtls/day vs 98,429 last season at par.",
+    "production": "Sugar produced 0.66 LQ vs 0.63 LQ last week. Sugar recovery improved. DS & RS sugar bagging volumes increased. Losses stable. Steam consumption reduced to 418 Kg/Qtl from 440 Kg/Qtl. Power consumption improved to 10.92 units/Qtl from 11.71.",
+    "power": "Total power generation 61.30 LU decreased from 65.27 LU last week due to boiler cleaning. Power export 36.34 LU vs 38.59 LU. Aux consumption stable around 7.94%. PLF for 30.85 MW turbine 97.74% vs 98.37% last week. 70 TPH boiler under planned shutdown with improved steam temperature after cleaning.",
+    "distillery": "Ethanol production dropped to 3.77 LL due to scheduled shutdown of 68.48 hrs during cleaning. Fermentation efficiency stable at 91.58%. Distillation efficiency at 98.66%. Steam consumption increased to 4.80 Kg/BL vs 4.09 Kg/BL previous week. Power consumption up at 0.634 KWH/BL from 0.443 KWH/BL.",
+    "quality_ehs": "Total losses at 3.10% slightly improved vs 3.18% last week. ICUMSA DS M-sugar improved to 86 IU. No major safety incidents. Safety audit completed. Ongoing TBT sessions and implementation of EHS initiatives.",
+    "risks": [
+      "Distillery shutdown caused production loss risk - requires optimal scheduling.",
+      "Old gearbox condition degrades further increasing maintenance risk.",
+      "Power plant boiler cleaning impacting generation - monitor steam parameters post-maintenance.",
+      "Cane supply disruptions due to weather affecting juice flow and crushing rates."
+    ]
+  },
+  "tables": {
+    "tableA": {
+      "headers": [
+        "KPI",
+        "Current Week",
+        "Last Week",
+        "Till Date",
+        "WoW Change"
+      ],
+      "rows": [
+        [
+          "Total Sugarcane Crush (LQ)",
+          "7.14",
+          "7.14",
+          "99.03",
+          "Flat"
+        ],
+        [
+          "Sugar Recovery",
+          "10.10%",
+          "10.03%",
+          "9.94%",
+          "+0.07pp"
+        ],
+        [
+          "Sugar Produced (LQ)",
+          "0.66",
+          "0.63",
+          "8.31",
+          "+0.03"
+        ],
+        [
+          "Power Generation (LU)",
+          "61.30",
+          "65.27",
+          "893.39",
+          "-6.13%"
+        ],
+        [
+          "Power Export (LU)",
+          "36.34",
+          "38.59",
+          "529.63",
+          "-5.82%"
+        ],
+        [
+          "Capacity Utilization Milling PUF",
+          "101.64%",
+          "102.07%",
+          "101.05%",
+          "-0.43pp"
+        ],
+        [
+          "Capacity Utilization Power PUF",
+          "91.22%",
+          "97.13%",
+          "94.96%",
+          "-5.91pp"
+        ],
+        [
+          "Capacity Utilization Distillery PUF",
+          "88.53%",
+          "93.41%",
+          "95.20%",
+          "-4.88pp"
+        ],
+        [
+          "Bagasse Pol %",
+          "1.73%",
+          "1.72%",
+          "1.74%",
+          "+0.01pp"
+        ],
+        [
+          "Bagasse Moisture %",
+          "50.20%",
+          "50.16%",
+          "50.13%",
+          "+0.04pp"
+        ],
+        [
+          "Total Losses (%)",
+          "3.10",
+          "3.18",
+          "2.43",
+          "-0.08"
+        ],
+        [
+          "Ethanol Produced (LL)",
+          "3.77",
+          "8.17",
+          "114.12",
+          "-53.88%"
+        ],
+        [
+          "Sugar Recovery BH – RS (%)",
+          "10.20",
+          "10.05",
+          "9.97",
+          "+0.15"
+        ],
+        [
+          "Sugar Recovery BH – DS (%)",
+          "10.11",
+          "9.99",
+          "9.67",
+          "+0.12"
+        ]
+      ]
+    },
+    "tableB": {
+      "headers": [
+        "Area",
+        "Current Week Narrative",
+        "Change vs Last Week"
+      ],
+      "rows": [
+        [
+          "Engineering",
+          "Ever Highest Crush 1.105 on 25.01.26. Cleaning planned on 29.01.26 (7.48 hrs actual). Juice flow maintained above 500 T/Hr. Gear Box SBN 630 proposed for new procurement.",
+          "Downtime increased from 6.33 hrs to 8.01 hrs due to cleaning and forced shutdowns. Mill operating smooth and consistent."
+        ],
+        [
+          "Cane Planning",
+          "Daily indent rate at 1.01 LQ. Gate indent maturity improved to 110% from 81%. Center indent maturity at 97% vs 76%. Yard balance stable at 24,700 Qtls. Indent failure cases actively tracked and revalidated.",
+          "Improvement in indent maturity. Persistent monitoring required."
+        ],
+        [
+          "Production",
+          "Sugar production at 0.66 LQ improved from 0.63 LQ. Sugar recovery improved. Bagging volumes for DS and RS increased. Losses stable with minor improvement.",
+          "Sugar quality ICUMSA DS M-sugar improved from 74 to 86 IU. Consumption efficiencies improved slightly."
+        ],
+        [
+          "Power",
+          "Power generation decreased to 61.30 LU due to 70 TPH boiler cleaning and 4 MW distillery plant shutdown. Export down to 36.34 LU. PLF for main turbine stable above 97%.",
+          "Generation reduced -4.13 LU due to maintenance activities."
+        ],
+        [
+          "Distillery",
+          "Ethanol production dropped to 3.77 LL due to scheduled 68.48 hrs cleaning shutdown. Fermentation and distillation efficiencies maintained.",
+          "Production impacted due to shutdown."
+        ],
+        [
+          "Quality/EHS",
+          "Total losses at 3.10% slightly improved. Safety audit completed. 1 near miss reported. Ongoing TBT sessions.",
+          "Losses marginally improved, EHS compliance progressing well."
+        ],
+        [
+          "Capex/Projects",
+          "Procurement initiated for long delivery items including cane unloaders conversion. Gearbox condition warrants new procurement.",
+          "Progress on long delivery items procurement and maintenance schedule."
+        ],
+        [
+          "IT",
+          "Internet bandwidth upgrade completed. Vehicle positioning system at gate weighbridge installation completed.",
+          "Marked progress in IT infrastructure enhancements."
+        ]
+      ]
+    }
+  }
+}
