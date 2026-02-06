@@ -1,12 +1,72 @@
 [
   {
-    "fileId": "a1bd072e-1dfa-4c4a-9252-f3003ad231f7",
+    "fileId": "1368f4e6-30a8-4970-bf77-8abe13828527",
     "millName": "Gobind Sugar Mill, Aira",
-    "week": "25th Jan. to 31th Jan. 2026",
-    "fileName": "a1bd072e-1dfa-4c4a-9252-f3003ad231f7-executive-summary.docx",
-    "filePath": "reports/download/a1bd072e-1dfa-4c4a-9252-f3003ad231f7-executive-summary.docx",
-    "pdfPath": "reports/download/a1bd072e-1dfa-4c4a-9252-f3003ad231f7-executive-summary.pdf",
-    "summaryPath": "reports/summary/a1bd072e-1dfa-4c4a-9252-f3003ad231f7",
-    "createdAt": "2026-02-04T09:07:53.321Z"
+    "week": "31 Oct 2025",
+    "fileName": "1368f4e6-30a8-4970-bf77-8abe13828527-executive-summary.docx",
+    "filePath": "reports/download/1368f4e6-30a8-4970-bf77-8abe13828527-executive-summary.docx",
+    "pdfPath": "reports/download/1368f4e6-30a8-4970-bf77-8abe13828527-executive-summary.pdf",
+    "summaryPath": "reports/summary/1368f4e6-30a8-4970-bf77-8abe13828527",
+    "createdAt": "2026-02-05T11:32:09.445Z"
+  },
+  {
+    "fileId": "5f68efeb-3774-4bd8-af92-04af4db85d84",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "07 Nov 2025",
+    "fileName": "5f68efeb-3774-4bd8-af92-04af4db85d84-executive-summary.docx",
+    "filePath": "reports/download/5f68efeb-3774-4bd8-af92-04af4db85d84-executive-summary.docx",
+    "pdfPath": "reports/download/5f68efeb-3774-4bd8-af92-04af4db85d84-executive-summary.pdf",
+    "summaryPath": "reports/summary/5f68efeb-3774-4bd8-af92-04af4db85d84",
+    "createdAt": "2026-02-05T12:00:43.524Z"
+  },
+  {
+    "fileId": "11286355-7f80-4cc9-a64d-b7f7b020ac36",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "14 Nov 2025",
+    "fileName": "11286355-7f80-4cc9-a64d-b7f7b020ac36-executive-summary.docx",
+    "filePath": "reports/download/11286355-7f80-4cc9-a64d-b7f7b020ac36-executive-summary.docx",
+    "pdfPath": "reports/download/11286355-7f80-4cc9-a64d-b7f7b020ac36-executive-summary.pdf",
+    "summaryPath": "reports/summary/11286355-7f80-4cc9-a64d-b7f7b020ac36",
+    "createdAt": "2026-02-05T12:03:44.311Z"
+  },
+  {
+    "fileId": "30399e7e-a7f0-4b81-b55b-96785ed8283a",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "21 Nov 2025",
+    "fileName": "30399e7e-a7f0-4b81-b55b-96785ed8283a-executive-summary.docx",
+    "filePath": "reports/download/30399e7e-a7f0-4b81-b55b-96785ed8283a-executive-summary.docx",
+    "pdfPath": "reports/download/30399e7e-a7f0-4b81-b55b-96785ed8283a-executive-summary.pdf",
+    "summaryPath": "reports/summary/30399e7e-a7f0-4b81-b55b-96785ed8283a",
+    "createdAt": "2026-02-05T12:14:14.915Z"
+  },
+  {
+    "fileId": "1a25fcf2-ea5c-4cee-add7-b3f39782e0cc",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "13 Dec 2025",
+    "fileName": "1a25fcf2-ea5c-4cee-add7-b3f39782e0cc-executive-summary.docx",
+    "filePath": "reports/download/1a25fcf2-ea5c-4cee-add7-b3f39782e0cc-executive-summary.docx",
+    "pdfPath": "reports/download/1a25fcf2-ea5c-4cee-add7-b3f39782e0cc-executive-summary.pdf",
+    "summaryPath": "reports/summary/1a25fcf2-ea5c-4cee-add7-b3f39782e0cc",
+    "createdAt": "2026-02-05T12:21:01.568Z"
+  },
+  {
+    "fileId": "911e9495-6a70-4dfb-8864-a4856807ef9e",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "20 Dec 2025",
+    "fileName": "911e9495-6a70-4dfb-8864-a4856807ef9e-executive-summary.docx",
+    "filePath": "reports/download/911e9495-6a70-4dfb-8864-a4856807ef9e-executive-summary.docx",
+    "pdfPath": "reports/download/911e9495-6a70-4dfb-8864-a4856807ef9e-executive-summary.pdf",
+    "summaryPath": "reports/summary/911e9495-6a70-4dfb-8864-a4856807ef9e",
+    "createdAt": "2026-02-05T12:27:55.780Z"
+  },
+  {
+    "fileId": "751225d9-9f73-4964-ab9c-6ca13598e00d",
+    "millName": "Gobind Sugar Mill, Aira",
+    "week": "31 Oct 2025",
+    "fileName": "751225d9-9f73-4964-ab9c-6ca13598e00d-executive-summary.docx",
+    "filePath": "reports/download/751225d9-9f73-4964-ab9c-6ca13598e00d-executive-summary.docx",
+    "pdfPath": "reports/download/751225d9-9f73-4964-ab9c-6ca13598e00d-executive-summary.pdf",
+    "summaryPath": "reports/summary/751225d9-9f73-4964-ab9c-6ca13598e00d",
+    "createdAt": "2026-02-05T12:34:29.186Z"
   }
 ]

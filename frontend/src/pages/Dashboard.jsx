@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Factory, Leaf, Zap } from "lucide-react";
+import ChatBot from "@/components/ChatBot";
 
 export default function Dashboard() {
     const navigate = useNavigate();
@@ -99,7 +100,6 @@ export default function Dashboard() {
                             <Leaf className="h-8 w-8 text-zinc-300" />
                         </div>
                         <div className="space-y-1">
-                            <h3 className="font-bold text-zinc-900">Agri-Services</h3>
                             <p className="text-sm text-zinc-500">Coming Soon</p>
                         </div>
                     </Card>
@@ -109,13 +109,14 @@ export default function Dashboard() {
                             <Zap className="h-8 w-8 text-zinc-300" />
                         </div>
                         <div className="space-y-1">
-                            <h3 className="font-bold text-zinc-900">Renewables</h3>
                             <p className="text-sm text-zinc-500">Coming Soon</p>
                         </div>
                     </Card>
 
                 </div>
             </div>
+                      <ChatBot />
+
         </main>
     );
 }

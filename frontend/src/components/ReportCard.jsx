@@ -62,7 +62,7 @@ export default function ReportCard({ report, onView }) {
                         <Factory className="h-5 w-5 text-blue-600" />
                     </div>
                     <CardTitle className="text-xl font-bold text-zinc-900 truncate">
-                        {report.millName}
+                        Executive Summary
                     </CardTitle>
                 </div>
                 <CardDescription className="flex items-center gap-2 text-zinc-500 font-medium">

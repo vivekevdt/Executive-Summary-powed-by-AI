@@ -51,6 +51,15 @@ export const generateExecutiveSummary = async (req, res) => {
 
     console.log("✅ PDFs generated");
 
+    // Clean up uploaded PPTs to save space
+    try {
+      if (fs.existsSync(prevPpt.path)) fs.unlinkSync(prevPpt.path);
+      if (fs.existsSync(currPpt.path)) fs.unlinkSync(currPpt.path);
+      console.log("🧹 Uploaded PPTs deleted");
+    } catch (cleanupErr) {
+      console.warn("⚠️ Failed to delete PPTs:", cleanupErr);
+    }
+
 
     //  Upload PDFs to OpenAI
     const prevPdfId = await uploadPdf(prevPdf);
@@ -209,7 +218,7 @@ export const updateReport = async (req, res) => {
     if (updatedData) {
       console.log("Checkpoint [INFO]: 'updatedData.data' found. Passing inner data to generator.");
       await generateDocx(updatedData, docxPath);
-    } 
+    }
 
 
     console.log("Checkpoint [3/4]: DOCX generation completed.");
@@ -224,7 +233,7 @@ export const updateReport = async (req, res) => {
       // We continue, as saving data is primary
     }
 
-    res.json({ success: true, message: "Report updated and regenerated successfully" ,data:updatedData});
+    res.json({ success: true, message: "Report updated and regenerated successfully", data: updatedData });
 
   } catch (error) {
     console.error("❌ updateReport Error:", error);

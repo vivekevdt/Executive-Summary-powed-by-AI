@@ -2,7 +2,7 @@
 import jwt from 'jsonwebtoken';
 
 const HARDCODED_EMAIL = 'admin@gmail.com';
-const HARDCODED_PASSWORD = 'password';
+const HARDCODED_PASSWORD = 'admin@1234567890';
 const JWT_SECRET = process.env.JWT_SECRET || 'your_super_secret_key_change_this';
 
 export const login = async (req, res) => {

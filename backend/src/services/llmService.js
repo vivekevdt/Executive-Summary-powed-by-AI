@@ -75,6 +75,14 @@ AUTO-FAIL CONDITIONS:
 
 MANDATORY CLOSING LINE (EXACT):
 "This review is based exclusively on numbers and narratives disclosed in the weekly PDF slides."
+
+DATE EXTRACTION PROTOCOL (CRITICAL: DO NOT FAIL THIS):
+• You MUST extract the exact "Week Ending" or period dates from the Title Slide, Headers, or Footers.
+• The "Current Week" date MUST come from the "Current Week Operational Review PDF".
+• The "Previous Week" date MUST come from the "Previous Week Operational Review PDF".
+• If multiple dates appear, prioritize the Title Slide date.
+• Format as "DD MMM YYYY" (e.g., "12 Jan 2024").
+• Do NOT default to "Current Date" or "Today". Use the document's internal date.
 `;
 
 const USER_PROMPT = `
@@ -82,18 +90,18 @@ Compare the Previous Week and Current Week PDFs.
 
 OUTPUT FORMAT: STRICT JSON ONLY (NO MARKDOWN, NO TEXT)
 
-Return JSON with the following schema:
+Return JSON object with the following schema:
 
 {
   "header": {
-    "mill_name": "",
-    "week": "",
-    "comparison_week": "",
-    "season_day": ""
+    "mill_name": "Extract exactly from Title Slide",
+    "week": "DATE from 'Current Week Operational Review PDF' (DD MMM YYYY)",
+    "comparison_week": "DATE from 'Previous Week Operational Review PDF' (DD MMM YYYY)",
+    "season_days": "Extract from Title Slide"
   },
   "part1": {
     "executive_summary": [
-      { "title": "CRUSHING PERFORMANCE", "text": "" },
+      { "title": "CRUSHING PERFORMANCE", "text": "Synthesize insights from current week vs previous week" },
       { "title": "RECOVERY", "text": "" },
       { "title": "LOSSES", "text": "" },
       { "title": "POWER", "text": "" },
@@ -102,8 +110,8 @@ Return JSON with the following schema:
       { "title": "CAPEX / PROJECTS", "text": "" },
       { "title": "EHS & SAFETY", "text": "" }
     ],
-    "overall_performance": "",
-    "benchmark_position": "",
+    "overall_performance": "Executive summary of plant performance",
+    "benchmark_position": "Compare against targets/budget if available",
     "cane_planning": "",
     "engineering": "",
     "production": "",
@@ -114,17 +122,22 @@ Return JSON with the following schema:
   },
   "tables": {
     "tableA": {
-      "headers": ["KPI","Current Week","Last Week","Till Date","WoW Change"],
+      "headers": ["KPI", "Current Week", "Last Week", "Till Date", "WoW Change"],
       "rows": []
     },
     "tableB": {
-      "headers": ["Area","Current Week Narrative","Change vs Last Week"],
+      "headers": ["Area", "Current Week Narrative", "Change vs Last Week"],
       "rows": []
     }
   }
 }
 
-STRICT RULES:
+STRICT DATE RULES:
+• "week" field MUST be the date range found in the "Current Week Operational Review PDF" title/header.
+• "comparison_week" field MUST be the date range found in the "Previous Week Operational Review PDF" title/header.
+• Format: "DD MMM YYYY" (e.g. "25 Oct 2025").
+
+STRICT CONTENT RULES:
 • JSON only
 • No prose outside JSON
 • Values must be copied verbatim from PDFs

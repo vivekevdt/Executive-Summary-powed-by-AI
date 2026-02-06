@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { List, Sparkles } from "lucide-react";
+import { List, Sparkles, LogOut } from "lucide-react";
+import { useAuth } from "../context/AuthContext";
 
 export default function Header() {
   const location = useLocation();
+  const { isAuthenticated, logout } = useAuth();
   const isDashboard = location.pathname === "/";
   const isLoginPage = location.pathname === "/login";
   const showHistory = !isDashboard && !isLoginPage;
@@ -23,7 +25,7 @@ export default function Header() {
             className="h-11 w-auto"
           />
           <img
-            src="../public/GSMA-logo.png"
+            src="/GSMA-logo.png"
             alt="GSMA LOGO"
             className="h-15 w-auto"
           />
@@ -46,6 +48,17 @@ export default function Header() {
                 <List className="h-4 w-4" />
                 <span className="hidden sm:inline">History</span>
               </Link>
+            </Button>
+          )}
+
+          {isAuthenticated && (
+            <Button
+              variant="ghost"
+              className="text-zinc-600 flex items-center gap-2"
+              onClick={logout}
+            >
+              <LogOut className="h-4 w-4" />
+              <span className="hidden sm:inline">Logout</span>
             </Button>
           )}
 

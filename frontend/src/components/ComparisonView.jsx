@@ -165,7 +165,7 @@ export default function ComparisonView({ isOpen, onClose, allReports, onFetchRep
                                 <SelectContent>
                                     {allReports.map(r => (
                                         <SelectItem key={`r1-${r.fileId}`} value={r.fileId} className="text-xs">
-                                            {r.millName} - {r.week}
+                                            {"Executive Summary"} - {r.week}
                                         </SelectItem>
                                     ))}
                                 </SelectContent>

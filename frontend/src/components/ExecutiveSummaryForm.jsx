@@ -254,8 +254,10 @@ export default function ExecutiveSummaryForm() {
               )}
             />
           </div>
+          
           <p className="text-[11px] text-zinc-500 px-1 italic">
-            Note: The report will be dispatched to this address upon completion.
+            Note: The report will be dispatched to these addresses upon completion.
+            If you want to send to multiple recipients, separate the email addresses with commas.
           </p>
         </section>
 

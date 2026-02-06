@@ -75,7 +75,7 @@ export const generateDocx = async (data, outputPath) => {
                         alignment: AlignmentType.CENTER,
                         children: [
                             new TextRun({
-                                text: `Season Day: ${data.header.season_day}`,
+                                text: `Season Days: ${data.header.season_day}`,
                                 size: 20,
                                 color: "666666",
                             }),
@@ -214,6 +214,18 @@ export const generateDocx = async (data, outputPath) => {
                                 color: "888888",
                             }),
                         ],
+                    }),
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        children: [
+                            new TextRun({
+                                text: "Note: This report is AI-generated and may not be fully accurate. Please review and validate the information before relying on it for decision-making.",
+                                italic: true,
+                                size: 16,
+                                color: "AAAAAA",
+                            }),
+                        ],
+                        spacing: { before: 100 }
                     })
                 ]
             }

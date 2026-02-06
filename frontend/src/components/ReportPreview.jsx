@@ -22,16 +22,13 @@ export default function ReportPreview({ isOpen, onClose, summary,setSummary, fil
     const [isEditing, setIsEditing] = useState(false);
     const [editData, setEditData] = useState(null);
     const [saving, setSaving] = useState(false);
-    console.log(summary)
 
     // Initialize edit data when opening or when summary loads
     useEffect(() => {
         if (summary) {
             setEditData(JSON.parse(JSON.stringify(summary)));
-            console.log(summary)
         }
     }, [summary]);
-    console.log(editData)
 
     // Reset edit mode on close
     useEffect(() => {
@@ -276,10 +273,10 @@ export default function ReportPreview({ isOpen, onClose, summary,setSummary, fil
                                                         />
                                                     </div>
                                                     <TextField
-                                                        label="Season Day"
+                                                        label="Season Days"
                                                         variant="standard"
-                                                        value={(isEditing ? editData : summary).data.header?.season_day || ""}
-                                                        onChange={(e) => updateHeader('season_day', e.target.value)}
+                                                        value={(isEditing ? editData : summary).data.header?.season_days || ""}
+                                                        onChange={(e) => updateHeader('season_days', e.target.value)}
                                                         style={{ width: '200px' }}
                                                         inputProps={{ style: { textAlign: 'center', fontSize: '0.875rem' } }}
                                                     />
@@ -293,7 +290,7 @@ export default function ReportPreview({ isOpen, onClose, summary,setSummary, fil
                                                         Week: {(isEditing ? editData : summary).data.header?.week} vs Previous Week ({(isEditing ? editData : summary).data.header?.comparison_week})
                                                     </div>
                                                     <div className="text-zinc-500 text-sm">
-                                                        Season Day: {(isEditing ? editData : summary).data.header?.season_day}
+                                                        Season Days: {(isEditing ? editData : summary).data.header?.season_days}
                                                     </div>
                                                 </>
                                             )}

@@ -1,0 +1,228 @@
+{
+  "header": {
+    "mill_name": "Gobind Sugar Mill, Aira",
+    "week": "14 Nov 2025",
+    "comparison_week": "07 Nov 2025",
+    "season_day": "20"
+  },
+  "part1": {
+    "executive_summary": [
+      {
+        "title": "CRUSHING PERFORMANCE",
+        "text": "Total Sugarcane Crush improved marginally from 6.89 LQ to 6.91 LQ. Pol in Cane improved from 10.98% to 11.15%. Capacity Utilization at Milling improved slightly from 98.43% to 98.64%. Downtime and stoppage showed minor changes."
+      },
+      {
+        "title": "RECOVERY",
+        "text": "Sugar Recovery increased slightly from 9.03% to 9.10%. Till date recovery at 9.05%, marginally improved from previous week. Pol in cane percentage increased from 10.98% to 11.15%."
+      },
+      {
+        "title": "LOSSES",
+        "text": "Total Pol Losses increased marginally to 1.96% from 1.89%, driven primarily by Pol in Final Molasses at 1.30% vs 1.16% last week."
+      },
+      {
+        "title": "POWER",
+        "text": "Power Generation remained stable at 64.56 LU vs 64.30 LU. Power Export similarly stable at 38.41 LU vs 38.32 LU. Aux Consumption slightly improved to 8.04% from 8.39% and Power Consumption consistent at 32.46 kW/ton cane."
+      },
+      {
+        "title": "DISTILLERY",
+        "text": "Ethanol production improved to 8.57 LL vs 8.03 LL. Capacity utilization increased to 97.93% from 93.19%. No downtime this week vs 2.58 hours last week."
+      },
+      {
+        "title": "SUGAR QUALITY",
+        "text": "DS House ICUMSA (M-sugar) slightly declined to 118 from 123 but remains within target. RS House sugar quality stable with ICUMSA L-sugar at 33 and M-sugar at 32."
+      },
+      {
+        "title": "CAPEX / PROJECTS",
+        "text": "Mud Removal System progress at 30% complete with civil works active. R3 Massecuite boiling work ongoing but delayed due to reassignment of mechanical contractor. Several other specialist projects completed or progressing as planned."
+      },
+      {
+        "title": "EHS & SAFETY",
+        "text": "TBT and Near Miss reports indicate continued focus on safety; all observed issues were addressed promptly. No major incidents reported."
+      }
+    ],
+    "overall_performance": "The plant operations continue a steady performance trend with improved crushing, stable recovery, and power generation. Marginal increase in losses and minor operational disturbances noted but overall stable. Distillery shows encouraging improvement in efficiency and shift to syrup feedstock. Capex projects show progress with close monitoring needed due to mechanical contractor reassignment. Safety protocols maintained robustly.",
+    "benchmark_position": "Current sugar recovery at 9.10% is below target 10.60%, indicating scope for improvement. Crushing rate excluding stoppages at 92,510 Qtls is below target 94,709 Qtls. Power consumption per ton cane at 32.46 kW is slightly above target of 31.54 kW. Capex projects progressing with some delays. No major deviations from benchmarks, but close attention required to quality and losses trends.",
+    "cane_planning": "Daily indent rate increased to 1.11 LQ from 1.05 LQ. Gate indent maturity declined to 82% from 95%. Center indent maturity slightly decreased to 90% from 92%. Affected cane increased to 3.9% from 1.8%. Average cane holding time in center increased to 12.30 hours from 11.12 hours. Action taken report continues to monitor 6,911 failed purchey centers and 2,554 gates.",
+    "engineering": "Cane crushed slightly up to 6.90 LQ from 6.89 LQ. Hours utilized declined marginally to 96.74% from 97.40%. Downtime increased to 5h 29m from 4h 22m. Planned stoppage increased to 3h 23m from 2h 0m. Forced shutdown stable. Pol % Bagasse improved slightly to 1.78%. Steam consumption increased from 4.87 to 5.08 KG/Qtl Cane. Power consumption stable. Significant stoppages related to shredder vibration and motor checks recorded.",
+    "production": "Sugar production improved marginally at 0.56 LQ vs 0.48 LQ. Sugar bagging increased for both RS and DS houses. C-Mol recovery showed strong improvement in RS to 5.99% from 3.63%, DS recovery stable at 5%. Sugar quality shows stability with slight improvement in DS purity. Steam consumption remains high versus target. R3 massecuite boiling delayed due to mechanical resource reassignment.",
+    "power": "Power generation nearly unchanged at 64.56 LU. Power export stable at 38.41 LU. Aux consumption improved to 8.04%. Turbine PLFs remain healthy above 90% for all units. Steam/fuel ratios stand near targets. Energy saving initiatives realized 0.25% APC reduction due to boiler feed pump optimization.",
+    "distillery": "Ethanol production improved to 8.57 LL from 8.03 LL. Zero downtime reported this week versus 2.58 hrs last week. Recovery on syrup feedstock at 6.44 BL/Qtl Cane stable. Distillation and fermentation efficiencies consistent. Steam and power consumption improved. Feedstock quality remains stable.",
+    "quality_ehs": "Total losses slightly increased to 1.96% from 1.89%. Bagasse and filter cake losses stable. Safety observations and near miss incidents promptly addressed. Ongoing training and TBT activities conducted. No major safety lapses reported.",
+    "risks": [
+      "Delay in Mud Removal System commissioning due to reassignment of mechanical contractor.",
+      "Increased affected cane percentage impacting raw material quality.",
+      "Stoppages due to shredder vibration and equipment wear could impact crushing continuity.",
+      "Payment-related queries from growers pose risk to farmer trust pending government advisory.",
+      "Need to improve indent maturity especially at gate level to maintain cane flow."
+    ]
+  },
+  "tables": {
+    "tableA": {
+      "headers": [
+        "KPI",
+        "Current Week",
+        "Last Week",
+        "Till Date",
+        "WoW Change"
+      ],
+      "rows": [
+        [
+          "Total Sugarcane Crush (LQ)",
+          "6.91",
+          "6.89",
+          "18.05",
+          "+0.29%"
+        ],
+        [
+          "Sugar Recovery (%)",
+          "9.10%",
+          "9.03%",
+          "9.05%",
+          "+0.07pp"
+        ],
+        [
+          "Sugar Produced (LQ)",
+          "0.56",
+          "0.60",
+          "1.16",
+          "-6.67%"
+        ],
+        [
+          "Capacity Utilization Milling PUF (%)",
+          "98.64%",
+          "98.43%",
+          "90.24%",
+          "+0.21pp"
+        ],
+        [
+          "Total Pol Losses (%)",
+          "1.96%",
+          "1.89%",
+          "1.92%",
+          "+0.07pp"
+        ],
+        [
+          "Pol % Bagasse",
+          "1.78%",
+          "1.83%",
+          "1.84%",
+          "-0.05pp"
+        ],
+        [
+          "Bagasse Moisture (%)",
+          "50.30%",
+          "50.34%",
+          "50.35%",
+          "-0.04pp"
+        ],
+        [
+          "Power Generation (LU)",
+          "64.56",
+          "64.30",
+          "173.55",
+          "+0.40%"
+        ],
+        [
+          "Power Export (LU)",
+          "38.41",
+          "38.32",
+          "106.53",
+          "+0.23%"
+        ],
+        [
+          "Power PLF 30.85 MW (%)",
+          "97.68%",
+          "97.96%",
+          "97.02%",
+          "-0.28pp"
+        ],
+        [
+          "150 TPH Boiler Capacity Utilization",
+          "150.2",
+          "149.3",
+          "150.3",
+          "+0.60%"
+        ],
+        [
+          "Ethanol Produced (LL)",
+          "8.57",
+          "8.03",
+          "26.19",
+          "+6.72%"
+        ],
+        [
+          "Distillery PUF (%)",
+          "97.93%",
+          "93.19%",
+          "96.07%",
+          "+4.74pp"
+        ],
+        [
+          "Fermentation Efficiency (%)",
+          "90.38%",
+          "91.52%",
+          "90.94%",
+          "-1.14pp"
+        ],
+        [
+          "Steam Consumption (Kg/BL Ethanol)",
+          "3.98",
+          "4.20",
+          "4.22",
+          "-5.24%"
+        ],
+        [
+          "Power Consumption (KWH/BL Ethanol)",
+          "0.437",
+          "0.458",
+          "0.430",
+          "-4.58%"
+        ]
+      ]
+    },
+    "tableB": {
+      "headers": [
+        "Area",
+        "Current Week Narrative",
+        "Change vs Last Week"
+      ],
+      "rows": [
+        [
+          "Engineering",
+          "Consistent crushing at 6.90 LQ. Downtime increased slightly to 5:29 hrs. Planned stoppage increased to 3:23 hrs for shredder motor checks. Pol % bagasse improved to 1.78%. Steam consumption increased to 5.08 kg/Qtl cane.",
+          "Downtime increased from 4:22 to 5:29 hrs. Pol % bagasse improved from 1.83% to 1.78%. Steam consumption increased from 4.87 to 5.08 kg/Qtl cane."
+        ],
+        [
+          "Cane Planning",
+          "Daily indent rate increased to 1.11 LQ with gate indent maturity declined to 82%. Affected cane increased to 3.9%. Average center cane holding time increased to 12.30 hrs.",
+          "Gate indent maturity declined from 95% to 82%. Affected cane increased from 1.8% to 3.9%. Center cane holding time increased from 11.12 hrs to 12.30 hrs."
+        ],
+        [
+          "Production",
+          "Sugar production slightly up to 0.56 LQ. C-Mol Recovery RS improved significantly to 5.99% from 3.63%. DS house sugar quality ICUMSA stable. Steam consumption remains high at 509 Kg/Qtl sugar.",
+          "Sugar production increased from 0.48 LQ to 0.56 LQ. C-Mol Recovery RS improved from 3.63% to 5.99%. Sugar quality improved slightly."
+        ],
+        [
+          "Power",
+          "Stable power generation at 64.56 LU. Aux consumption improved to 8.04%. Turbine PLFs steady. Energy saving observed due to optimized boiler feed pump operation.",
+          "Power generation stable. Aux consumption improved from 8.39% to 8.04%. Turbine PLF steady."
+        ],
+        [
+          "Distillery",
+          "Ethanol production rose to 8.57 LL from 8.03 LL. Zero downtime reported with slight decrease in steam and power consumption per BL ethanol. Feedstock syrup quality stable.",
+          "Ethanol production increased. Downtime reduced to zero from 2.58 hrs."
+        ],
+        [
+          "Quality/EHS",
+          "Total losses marginally increased to 1.96%. Safety and hazard observations addressed; no major incidents. Ongoing training and TBT.",
+          "Losses increased slightly. Safety measures continue to be effective."
+        ],
+        [
+          "Capex / Projects",
+          "Mud Removal System progress at 30%. R3 Massecuite boiling ongoing but delayed due to reassignment of mechanical contractor. Other projects completed or in progress.",
+          "MRS progress improved from earlier weeks. R3 boiling work delayed compared to plan."
+        ]
+      ]
+    }
+  }
+}

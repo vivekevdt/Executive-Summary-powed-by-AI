@@ -1,0 +1,239 @@
+{
+  "header": {
+    "mill_name": "Gobind Sugar Mill, Aira",
+    "week": "31 Oct 2025",
+    "comparison_week": "27 Dec 2025",
+    "season_days": "6"
+  },
+  "part1": {
+    "executive_summary": [
+      {
+        "title": "CRUSHING PERFORMANCE",
+        "text": "Current week total sugarcane crush at 4.25 LQ unchanged from last week. Crushing started on 25th October 2025, with successful operation establishment. Capacity utilization at 70.90% vs 70.90% last week."
+      },
+      {
+        "title": "RECOVERY",
+        "text": "Sugar recovery stable at 9.00% both current and last week."
+      },
+      {
+        "title": "LOSSES",
+        "text": "Total pol losses at 1.88% this week same as last week with breakdown Bagasse 0.55%, Filter Cake 0.08%, Molasses 1.08%, Unknown 0.17%."
+      },
+      {
+        "title": "POWER",
+        "text": "Power generation at 44.69 LU same as last week. Power export is 29.80 LU same as last week. Power consumption at 33.32% of generation."
+      },
+      {
+        "title": "DISTILLERY",
+        "text": "Ethanol production improved to 1.86 LL from 1.38 LL last week. Distillery Plant started 30th October 2025 after scheduled maintenance. Distillery PUF at 100.72% improved from 76.82%. Ethanol recovery-syrup at 5.97 BL/Qtl improved. Fermentation efficiency stable at 91.03%."
+      },
+      {
+        "title": "SUGAR QUALITY",
+        "text": "ICUMSA M-sugar RS at 30, within target <30, stable from last week."
+      },
+      {
+        "title": "CAPEX / PROJECTS",
+        "text": "Significant progress with mill roller machining and supply planned end Nov'25, Rotary Screen refurbished and in operation. Electrical and Instrumentation capex progressing. Mud Removal System scaffolding and pan calandria works ongoing."
+      },
+      {
+        "title": "EHS & SAFETY",
+        "text": "Multiple hazardous observations in distillery with corrective actions immediately taken and closed. Near-miss incidents reported and addressed."
+      }
+    ],
+    "overall_performance": "Operations running successfully since 25th Oct 2025 with stable crushing, power and distillery performance. Maintenance and commissioning activities progressing as planned. Quality parameters within targets and losses stable.",
+    "benchmark_position": "Current 6-day capacity utilization at 70.90% vs target 94.71%. Recovery at 9.00% vs target 10.60%. Power consumption KW/T Cane at 32.61 vs target 31.5-32. Total losses lower than historical season average at 1.88%.",
+    "cane_planning": "Daily indent at 1.56 LQ vs target requirement; gate indent maturity 50%, center indent 65%. Pol in cane at 10.89%. Vehicle holding times vary across centers with issues in bottom 10 centers due to disputes, transportation and labor problems.",
+    "engineering": "Cane crushed 4.25 LQ for week with 98.68% hours utilized. Downtime low at 1.54 hrs. Pol % bagasse high at 1.96% above target. Power consumption marginally above target. Major planned critical spare procurements ongoing.",
+    "production": "Sugar production stable at 0.12 LQ. Sugar bagging quantities reported. DS house started 29th Oct, operation progressing. Improvements in R3 pan and mud removal system. Recovery stable.",
+    "power": "30.85 MW co-gen plant operating at 95.16% PLF. 70 TPH boiler started. Stoppage in 35 TPH boiler rectified. Power consumption per ton cane at 32.61 KWH, higher than target. Aux consumption within limits.",
+    "distillery": "Distillery restarted 30th Oct. Capacity utilization 100.72%. Ethanol production increased to 1.86 LL. Efficiency indicators (fermentation 91.03%, distillation 98.63%) stable or improving. Feedstock syrup quality good.",
+    "quality_ehs": "Bagasse pol and moisture marginally above target. Sugar quality ICUMSA within targets. Zero reportable accidents. Hazard observations been managed proactively.",
+    "risks": [
+      "Downtime in 4 MW TG set due to seal box leakage caused 3 hours outage.",
+      "High pol in bagasse 1.96% above target 1.65-1.70%.",
+      "Vehicle holding time and transportation issues persist in certain centers impacting cane supply.",
+      "Ongoing capex delivery delays (e.g. mill roller spare) require close monitoring."
+    ]
+  },
+  "tables": {
+    "tableA": {
+      "headers": [
+        "KPI",
+        "Current Week",
+        "Last Week",
+        "Till Date",
+        "WoW Change"
+      ],
+      "rows": [
+        [
+          "Cane Crushed (LQ)",
+          "4.25",
+          "4.25",
+          "4.25",
+          "Flat"
+        ],
+        [
+          "Sugar Recovery (%)",
+          "9.00%",
+          "9.00%",
+          "9.00%",
+          "Flat"
+        ],
+        [
+          "Sugar Produced (LQ)",
+          "0.12",
+          "0.12",
+          "0.12",
+          "Flat"
+        ],
+        [
+          "Capacity Utilization (%)",
+          "70.90%",
+          "70.90%",
+          "70.90%",
+          "Flat"
+        ],
+        [
+          "Total Losses (%)",
+          "1.88%",
+          "1.88%",
+          "1.88%",
+          "Flat"
+        ],
+        [
+          "Pol % Bagasse",
+          "1.96%",
+          "1.96%",
+          "1.96%",
+          "Flat"
+        ],
+        [
+          "Bagasse Moisture %",
+          "50.52%",
+          "50.52%",
+          "50.52%",
+          "Flat"
+        ],
+        [
+          "Power Generation (LU)",
+          "44.69",
+          "44.69",
+          "44.69",
+          "Flat"
+        ],
+        [
+          "Power Export (LU)",
+          "29.80",
+          "29.80",
+          "29.80",
+          "Flat"
+        ],
+        [
+          "Power Consumption (% of Gen.)",
+          "33.32%",
+          "33.32%",
+          "33.32%",
+          "Flat"
+        ],
+        [
+          "Distillery Production (LL)",
+          "1.86",
+          "1.38",
+          "9.60",
+          "Up"
+        ],
+        [
+          "Distillery PUF (%)",
+          "100.72%",
+          "76.82%",
+          "71.95%",
+          "Up"
+        ],
+        [
+          "Ethanol Recovery Syrup (BL/Qtl)",
+          "5.97",
+          "5.97",
+          "",
+          "Flat"
+        ],
+        [
+          "Fermentation Efficiency (%)",
+          "91.03%",
+          "90.71%",
+          "90.68%",
+          "Up"
+        ],
+        [
+          "Distillation Efficiency (%)",
+          "98.63%",
+          "98.75%",
+          "98.67%",
+          "Slight dip"
+        ],
+        [
+          "Steam Consumed (Kg/BL)",
+          "4.30",
+          "4.38",
+          "4.48",
+          "Down"
+        ],
+        [
+          "Power Consumed (KWH/BL)",
+          "0.509",
+          "0.627",
+          "0.698",
+          "Down"
+        ]
+      ]
+    },
+    "tableB": {
+      "headers": [
+        "Area",
+        "Current Week Narrative",
+        "Change vs Last Week"
+      ],
+      "rows": [
+        [
+          "Engineering",
+          "Cane crushed 4.254 LQ. Hours utilized at 98.68%. Downtime limited to 1.54 hrs. Pol % Bagasse at 1.96% above target. Capex progressing with mill roller machining ongoing and rotary screen refurbished.",
+          "No material change vs last week."
+        ],
+        [
+          "Cane Planning",
+          "Daily indent rate at 1.56 LQ as per requirement. Gate indent maturity at 50%, center indent at 65%. Pol in cane at 10.89%. Affected cane zero percent. Vehicle holding time at centers monitored with issues in bottom performers.",
+          "No material change vs last week."
+        ],
+        [
+          "Production",
+          "Crushing started 25th Oct 2025, DS house started 29th Oct. Sugar production stable at 0.12 LQ. Sugar quality ICUMSA RS M-sugar at 30. Mud removal system and R3 pan works in progress.",
+          "DS house started. No major change in production levels. Quality stable."
+        ],
+        [
+          "Power",
+          "30.85 MW power plant running at 95.16% PLF. 70 TPH boiler started on 28 Oct. 35 TPH boiler had leakage attended & rectified. Power consumption 32.61 KW/T CNC.",
+          "No material change vs last week."
+        ],
+        [
+          "Distillery",
+          "Distillery started 30 Oct post-maintenance. Capacity utilization 100.72%. Ethanol production at 1.86 LL improved from 1.38 LL. Fermentation efficiency slightly up; power consumption improved.",
+          "Improvement in capacity utilization and production."
+        ],
+        [
+          "Quality/EHS",
+          "Bagasse moisture and pol % slightly above target. Hazard observations promptly addressed. Near misses closed. Safety culture emphasized with PPE compliance.",
+          "No material change vs last week."
+        ],
+        [
+          "Capex/Projects",
+          "Mill roller machining on track; spare roller expected end Nov. Other equipment refurbishments progressing. Electrical VFD replacements and instrumentation upgrades ongoing. Mud removal system scaffold & calandria works active.",
+          "Ongoing procurement and installation progressing as scheduled."
+        ],
+        [
+          "Risks",
+          "Seal box leakage on 4 MW TG set caused 3 hr forced outage requiring boiler shutdown and turbine sync delay. Pol % bagasse above target. Transportation issues continue to impact cane timely supply.",
+          "Operational risks centered on equipment reliability and transport logistics."
+        ]
+      ]
+    }
+  }
+}
