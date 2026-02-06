@@ -39,7 +39,7 @@ export default function Reports() {
   const fetchReports = async () => {
     try {
       setLoading(true);
-      let apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      let apiUrl = import.meta.env.VITE_API_URL || "";
       const res = await fetch(`${apiUrl}/api/reports`, {
         headers: {
           'Authorization': `Bearer ${token}`

@@ -14,7 +14,13 @@ const app = express();
  */
 app.use(
   cors({
-    origin: ['http://localhost:5174', 'http://localhost:5173', 'https://executive-summary-powed-by-ai-zuari.onrender.com'],
+    origin: [
+      'http://localhost:5174',
+      'http://localhost:5173',
+      'https://executive-summary-powed-by-ai-zuari.onrender.com',
+      'http://localhost:5000',
+      'http://192.168.64.174:5000'
+    ],
     methods: ['GET', 'POST', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
@@ -38,6 +44,15 @@ app.use('/src/storage/generatedSummary', express.static(path.join(__dirname, 'st
 
 app.use('/api/reports', reportRoutes);
 app.use('/api/auth', authRoutes);
+
+// Serve static files from the React frontend app
+const buildPath = path.join(__dirname, '../../frontend/dist');
+app.use(express.static(buildPath));
+
+// Anything that doesn't match the above, send back index.html
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
+});
 
 
 export default app;

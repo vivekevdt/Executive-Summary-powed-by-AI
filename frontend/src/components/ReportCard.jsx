@@ -26,7 +26,7 @@ export default function ReportCard({ report, onView }) {
 
         setDownloading(true);
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+            const apiUrl = import.meta.env.VITE_API_URL || "";
             const res = await fetch(`${apiUrl}/api/reports/download/${filename}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         setLoading(true);
         try {
-            let apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+            let apiUrl = import.meta.env.VITE_API_URL || "";
             const response = await fetch(`${apiUrl}/api/auth/login`, {
                 method: "POST",
                 headers: {
