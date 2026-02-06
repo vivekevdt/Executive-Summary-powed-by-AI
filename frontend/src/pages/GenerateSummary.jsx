@@ -1,6 +1,10 @@
+import { useLocation } from "react-router-dom";
 import ExecutiveSummaryForm from "../components/ExecutiveSummaryForm";
 
 export default function GenerateSummary() {
+  const location = useLocation();
+  const { businessId, businessName } = location.state || {}; // Get business info from dashboard click
+
   return (
     <main className="relative min-h-[calc(100vh-4rem)] overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
       {/* Background Image with Overlay */}
@@ -11,7 +15,7 @@ export default function GenerateSummary() {
       <div className="absolute inset-0 z-0 bg-white/40" />
 
       <div className="relative z-10 container max-w-7xl mx-auto">
-        <ExecutiveSummaryForm />
+        <ExecutiveSummaryForm businessId={businessId} businessName={businessName} />
       </div>
     </main>
   );

@@ -106,7 +106,7 @@ function FileUploader({ label, file, setFile, icon }) {
 
 /* ---------------- Main Form ---------------- */
 
-export default function ExecutiveSummaryForm() {
+export default function ExecutiveSummaryForm({ businessId, businessName }) {
   const [currentWeek, setCurrentWeek] = useState(null);
   const [previousWeek, setPreviousWeek] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -141,6 +141,11 @@ export default function ExecutiveSummaryForm() {
     formData.append("previousWeek", previousWeek);
     formData.append("recipientEmail", recipientEmail);
     formData.append("jobId", jobId);
+
+    // Pass business ID if available (manual override or specific selection)
+    if (businessId) {
+      formData.append("businessId", businessId);
+    }
 
     // Polling function
     const pollStatus = async () => {
@@ -208,7 +213,7 @@ export default function ExecutiveSummaryForm() {
             <Sparkles className="h-10 w-10 text-blue-500 animate-pulse" />
           </div>
           <h1 className="text-5xl font-black tracking-tight text-zinc-900 sm:text-6xl">
-            SPE Executive <span className="text-blue-600">Summary</span>
+            {businessName ? businessName : "SPE Executive"} <span className="text-blue-600">Summary</span>
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
             Our AI engine analyzes your weekly PPT reports to highlight key changes, performance metrics, and strategic insights.
@@ -254,7 +259,7 @@ export default function ExecutiveSummaryForm() {
               )}
             />
           </div>
-          
+
           <p className="text-[11px] text-zinc-500 px-1 italic">
             Note: The report will be dispatched to these addresses upon completion.
             If you want to send to multiple recipients, separate the email addresses with commas.

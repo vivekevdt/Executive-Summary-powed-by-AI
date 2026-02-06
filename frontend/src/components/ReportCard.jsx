@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 
 export default function ReportCard({ report, onView }) {
-    const { token } = useAuth();
+    const { token, user } = useAuth();
     const [downloadingDoc, setDownloadingDoc] = useState(false);
     const [downloadingPdf, setDownloadingPdf] = useState(false);
 
@@ -61,9 +61,14 @@ export default function ReportCard({ report, onView }) {
                     <div className="p-2 bg-blue-500/10 rounded-lg">
                         <Factory className="h-5 w-5 text-blue-600" />
                     </div>
-                    <CardTitle className="text-xl font-bold text-zinc-900 truncate">
-                        Executive Summary
-                    </CardTitle>
+                    <div>
+                        <CardTitle className="text-xl font-bold text-zinc-900 truncate">
+                            Executive Summary
+                        </CardTitle>
+                        {user?.role === 'admin' && (
+                            <p className="text-xs text-blue-600 font-bold uppercase tracking-wider mt-1">{report.businessName}</p>
+                        )}
+                    </div>
                 </div>
                 <CardDescription className="flex items-center gap-2 text-zinc-500 font-medium">
                     <Calendar className="h-4 w-4" />

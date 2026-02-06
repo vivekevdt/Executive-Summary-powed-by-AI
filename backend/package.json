@@ -6,11 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "reset": "node scripts/reset_system.js"
   },
   "author": "Vivek",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.19.2",
     "convertapi": "^1.15.0",
     "cors": "^2.8.6",
     "docx": "^9.5.1",
@@ -26,6 +28,7 @@
     "openai": "^6.17.0",
     "pdf-parse": "^2.4.5",
     "pdfkit": "^0.17.2",
+    "prisma": "^6.19.2",
     "uuid": "^13.0.0"
   }
 }

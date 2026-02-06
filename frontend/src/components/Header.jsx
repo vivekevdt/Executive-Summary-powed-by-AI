@@ -1,11 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { List, Sparkles, LogOut } from "lucide-react";
+import { List, Sparkles, LogOut, Shield } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 export default function Header() {
   const location = useLocation();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout, user } = useAuth();
   const isDashboard = location.pathname === "/";
   const isLoginPage = location.pathname === "/login";
   const showHistory = !isDashboard && !isLoginPage;
@@ -38,6 +38,15 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center gap-3">
+          {user?.role === "admin" && (
+            <Button asChild variant="ghost" className="text-zinc-600">
+              <Link to="/admin" className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                <span className="hidden sm:inline">Admin</span>
+              </Link>
+            </Button>
+          )}
+
           {showHistory && (
             <Button
               asChild
@@ -49,6 +58,19 @@ export default function Header() {
                 <span className="hidden sm:inline">History</span>
               </Link>
             </Button>
+          )}
+
+          {isAuthenticated && user && (
+            <div className="hidden md:flex items-center gap-2 px-2 border-r border-zinc-200">
+              <div className="text-right">
+                <p className="text-sm font-semibold text-zinc-900 leading-none">
+                  {user.email?.split('@')[0]}
+                </p>
+                <p className="text-[10px] text-zinc-500 uppercase font-medium mt-1">
+                  {user.role}
+                </p>
+              </div>
+            </div>
           )}
 
           {isAuthenticated && (

@@ -10,17 +10,19 @@ import {
   generateSummaryFromPdfs
 } from '../services/llmService.js';
 import { sendMailWithAttachment } from '../services/mailService.js';
-import { saveMetadata, getAllMetadata } from '../utils/fileUtils.js';
-
+import prisma from '../config/db.js';
 import { generateDocx } from '../services/generateDocx.js';
 import { updateProgress, clearProgress, getProgress } from '../utils/progressStore.js';
-
-
-
 
 export const generateExecutiveSummary = async (req, res) => {
   try {
     console.log("🚀 Step 0: Request received");
+
+    // Helper to get current user info safely
+    const currentUser = req.user || {};
+    // Prioritize businessId from Body (if Admin selects it), else fall back to User's assigned Business
+    const businessId = req.body.businessId ? parseInt(req.body.businessId) : (currentUser.businessId ? parseInt(currentUser.businessId) : null);
+    const userId = currentUser.userId ? parseInt(currentUser.userId) : null;
 
     const prevPpt = req.files.previousWeek[0];
     const currPpt = req.files.currentWeek[0];
@@ -95,18 +97,28 @@ export const generateExecutiveSummary = async (req, res) => {
     const summaryJsonPath = `src/storage/generatedSummary/${id}-summary.json`;
     fs.writeFileSync(summaryJsonPath, JSON.stringify(summaryJson, null, 2));
 
-    saveMetadata({
-      fileId: id,
-      millName: summaryJson.header?.mill_name || "Unknown Mill",
-      week: summaryJson.header?.week || "Unknown Week",
-      fileName: `${id}-executive-summary.docx`,
-      filePath: `reports/download/${id}-executive-summary.docx`,
-      pdfPath: `reports/download/${id}-executive-summary.pdf`,
-      summaryPath: `reports/summary/${id}`,
-      createdAt: new Date().toISOString()
+    // SAVE TO DB:
+    const docxUrl = `reports/download/${id}-executive-summary.docx`;
+    const pdfUrl = `reports/download/${id}-executive-summary.pdf`;
+    const jsonUrl = `reports/summary/${id}`;
+
+    await prisma.report.create({
+      data: {
+        id: id,
+        title: summaryJson.header?.mill_name || "Unknown Mill",
+        millName: summaryJson.header?.mill_name || "Unknown Mill",
+        week: summaryJson.header?.week || "Unknown Week",
+        lastWeekDate: summaryJson.header?.lastWeekDate || summaryJson.header?.comparison_week,
+
+        report_word: docxUrl,
+        report_pdf: pdfUrl,
+        report_json: jsonUrl,
+
+        // Optional relations
+        userId: userId,
+        businessId: businessId
+      }
     });
-
-
 
     res.json({
       success: true,
@@ -166,9 +178,59 @@ export const getReportSummary = async (req, res) => {
 
 export const getAllReports = async (req, res) => {
   try {
-    const reports = getAllMetadata();
-    res.json(reports);
+    const user = req.user;
+    let whereClause = {};
+
+    if (user.role === 'admin') {
+      // Admin sees all? Or can filter
+      // For now, let's say admin sees all unless specific business ID implies otherwise?
+      // Or maybe admin dashboard shows EVERYTHING.
+    } else {
+      // Regular users only see their business's reports
+      if (user.businessId) {
+        whereClause.businessId = user.businessId;
+      } else {
+        // User with no business sees nothing? OR sees reports they created?
+        whereClause.userId = user.userId;
+      }
+    }
+
+    // Allow frontend to request specific business if admin
+    if (req.query.businessId && user.role === 'admin') {
+      whereClause.businessId = parseInt(req.query.businessId);
+    }
+
+
+    const reports = await prisma.report.findMany({
+      where: whereClause,
+      include: {
+        business: {
+          select: { name: true }
+        },
+        user: {
+          select: { email: true }
+        }
+      },
+      orderBy: { createdAt: 'desc' }
+    });
+
+    // Map to frontend expectation
+    const mappedReports = reports.map(r => ({
+      fileId: r.id,
+      millName: r.millName,
+      businessName: r.business?.name || "N/A",
+      userEmail: r.user?.email || "N/A",
+      week: r.week,
+      fileName: r.report_word.split('/').pop(), // Extract filename from path
+      filePath: r.report_word,
+      pdfPath: r.report_pdf,
+      summaryPath: r.report_json,
+      createdAt: r.createdAt
+    }));
+
+    res.json(mappedReports);
   } catch (error) {
+    console.error("getAllReports Error:", error);
     res.status(500).json({ error: error.message });
   }
 };

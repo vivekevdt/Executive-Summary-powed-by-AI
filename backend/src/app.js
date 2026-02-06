@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import reportRoutes from './routes/reportRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import businessRoutes from './routes/businessRoutes.js';
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use('/src/storage/generatedSummary', express.static(path.join(__dirname, 'st
 
 app.use('/api/reports', reportRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/businesses', businessRoutes);
 
 // Serve static files from the React frontend app
 const buildPath = path.join(__dirname, '../../frontend/dist');

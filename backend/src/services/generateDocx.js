@@ -300,7 +300,7 @@ const buildTable = (table, headerBgColor) =>
             }),
             ...table.rows.map(row =>
                 new TableRow({
-                    children: row.map(cell =>
+                    children: row?.map(cell =>
                         new TableCell({
                             margins: { top: 80, bottom: 80, left: 100, right: 100 },
                             children: [new Paragraph(cell)]

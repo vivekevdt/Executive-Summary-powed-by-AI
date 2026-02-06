@@ -1,3 +1,4 @@
+import { z } from "zod";
 
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
@@ -56,10 +57,18 @@ const muiTheme = createTheme({
     },
 });
 
+// ... existing imports
+
+const loginSchema = z.object({
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(1, "Password is required"),
+});
+
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [fieldErrors, setFieldErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
     const { login } = useAuth();
@@ -68,7 +77,19 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
+        setFieldErrors({});
         setLoading(true);
+
+        const validation = loginSchema.safeParse({ email, password });
+        if (!validation.success) {
+            const formattedErrors = validation.error.format();
+            setFieldErrors({
+                email: formattedErrors.email?._errors[0],
+                password: formattedErrors.password?._errors[0]
+            });
+            setLoading(false);
+            return;
+        }
 
         const result = await login(email, password);
 
@@ -123,10 +144,14 @@ const Login = () => {
                                         variant="outlined"
                                         fullWidth
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        onChange={(e) => {
+                                            setEmail(e.target.value);
+                                            if (fieldErrors.email) setFieldErrors(prev => ({ ...prev, email: undefined }));
+                                        }}
                                         disabled={loading}
                                         placeholder="name@enterprise.com"
-
+                                        error={!!fieldErrors.email}
+                                        helperText={fieldErrors.email}
                                     />
 
                                     <TextField
@@ -136,10 +161,14 @@ const Login = () => {
                                         variant="outlined"
                                         fullWidth
                                         value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        onChange={(e) => {
+                                            setPassword(e.target.value);
+                                            if (fieldErrors.password) setFieldErrors(prev => ({ ...prev, password: undefined }));
+                                        }}
                                         disabled={loading}
                                         placeholder="••••••••"
-
+                                        error={!!fieldErrors.password}
+                                        helperText={fieldErrors.password}
                                     />
                                 </div>
 

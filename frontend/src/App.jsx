@@ -3,6 +3,7 @@ import GenerateSummary from "./pages/GenerateSummary";
 import Reports from "./pages/Reports";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import Header from "./components/Header";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -20,6 +21,7 @@ export default function App() {
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/spe" element={<GenerateSummary />} />
               <Route path="/spe/reports" element={<Reports />} />
             </Route>

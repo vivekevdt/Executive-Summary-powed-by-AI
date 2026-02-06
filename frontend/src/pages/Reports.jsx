@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Plus, Loader2, Search, Filter, GitCompare, LayoutGrid, List } from "lucide-react";
@@ -15,7 +15,12 @@ export default function Reports() {
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("latest");
-  const { token } = useAuth();
+  const { token, user } = useAuth();
+  const location = useLocation();
+
+  // Admin Context Selection
+  const selectedBusinessId = location.state?.businessId;
+  const selectedBusinessName = location.state?.businessName;
 
   // Selection for comparison
   const [selectedIds, setSelectedIds] = useState([]);
@@ -34,13 +39,20 @@ export default function Reports() {
 
   useEffect(() => {
     fetchReports();
-  }, []);
+  }, [selectedBusinessId]);
 
   const fetchReports = async () => {
     try {
       setLoading(true);
       let apiUrl = import.meta.env.VITE_API_URL || "";
-      const res = await fetch(`${apiUrl}/api/reports`, {
+
+      // If admin selected a business, filter by that ID
+      let url = `${apiUrl}/api/reports`;
+      if (selectedBusinessId) {
+        url += `?businessId=${selectedBusinessId}`;
+      }
+
+      const res = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -145,7 +157,15 @@ export default function Reports() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-10 border-b border-zinc-200">
           <div className="space-y-4">
             <h1 className="text-5xl font-black tracking-tighter text-zinc-900 uppercase italic">
-              Reports <span className="text-blue-600 not-italic">Archive</span>
+              {selectedBusinessName ? (
+                <>
+                  {selectedBusinessName} <span className="text-blue-600 not-italic">Archive</span>
+                </>
+              ) : (
+                <>
+                  Reports <span className="text-blue-600 not-italic">Archive</span>
+                </>
+              )}
             </h1>
             <p className="text-zinc-600 font-medium max-w-md">
               Manage and analyze all your generated executive summaries in one high-performance dashboard.
@@ -161,12 +181,21 @@ export default function Reports() {
               Compare Reports
             </Button>
 
-            <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white blue-glow px-8 h-12 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-200">
-              <Link to="/spe">
-                <Plus className="mr-2 h-5 w-5" />
-                New Analysis
-              </Link>
-            </Button>
+            {/* Hide New Analysis if Admin is viewing specific business read-only */}
+            {!(user?.role === 'admin' && selectedBusinessId) && (
+              <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white blue-glow px-8 h-12 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-200">
+                <Link
+                  to="/spe"
+                  state={user?.role === 'user' ? {
+                    businessId: user?.businessId,
+                    businessName: user?.business?.name
+                  } : null}
+                >
+                  <Plus className="mr-2 h-5 w-5" />
+                  New Analysis
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
 
