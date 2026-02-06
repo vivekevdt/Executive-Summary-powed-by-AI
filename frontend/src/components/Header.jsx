@@ -8,7 +8,7 @@ export default function Header() {
   const { isAuthenticated, logout, user } = useAuth();
   const isDashboard = location.pathname === "/";
   const isLoginPage = location.pathname === "/login";
-  const showHistory = !isDashboard && !isLoginPage;
+  const showHistory = !isDashboard && !isLoginPage && user?.role !== 'admin';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white">
